@@ -7,26 +7,13 @@ module.exports = function (grunt) {
 
         myTask: {},
 
-        // install dojo deps
-        'bower-install-simple': {
-            options: {
-                color: true,
-                directory: './'
-            },
-            main: {
-                options: {
-                    production: false
-                }
-            }
-        },
-
         // connect and open dev app
-        connect: {
-            styleguide: {
+        connect: {styleguide: {
                 options: {
                     port: 3000,
                     base: './',
-                    hostname: '*'
+                    hostname: '*',
+                    livereload: true
                 }
             }
         },
@@ -39,8 +26,10 @@ module.exports = function (grunt) {
 
         watch: {
             styleguide: {
-                files: ['**/*.html'],
-                styleguidetasks: []
+                options: {
+                    livereload: true
+                },
+                files: ['**/*.html']
             },
         }
     });
@@ -54,7 +43,7 @@ module.exports = function (grunt) {
 
     // default run dijit theme tester
     grunt.registerTask('default', [
-        'connect:styleguide',
+        'connect',
         'open:styleguide',
         'watch:styleguide'
     ]);
