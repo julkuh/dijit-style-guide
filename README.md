@@ -1,5 +1,5 @@
 # dijit-style-guide
-A nicer way to present dojo's default Theme-Tester
+A nicer way to present dojo's default Theme-Tester. It allows to edit style-guide.html and livereload the page in browser after editing it. Currently the `style-guide.html` is only a copy of dijit's theme-tester.html. In future it will be a more modern and user friendly test-page to show-off all of the awesome Dojo Features.
 
 ## Getting Started
 
