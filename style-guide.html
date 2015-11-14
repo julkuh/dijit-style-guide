@@ -540,137 +540,301 @@
                             <div class="grid-container">
                                 <div class="row">
                                     <div class="col-6">
-                                        <h2 id="nav-buttons">Buttons</h2>
+                                        <section id="nav-buttons">
+                                            <h2>Buttons</h2>
 
-                                        <p>Buttons can do an action, display a menu, or both:</p>
+                                            <p>Buttons can do an action, display a menu, or both:</p>
 
-                                        Enabled:
+                                            Enabled:
 
-                                        <button data-dojo-type="dijit/form/Button" data-dojo-props="iconClass:'dijitIconTask', onClick:function(){ console.debug('clicked simple') }">
-                                            Simple
-                                        </button>
+                                            <button data-dojo-type="dijit/form/Button" data-dojo-props="iconClass:'dijitIconTask', onClick:function(){ console.debug('clicked simple') }">
+                                                Simple
+                                            </button>
 
-                                        <div data-dojo-type="dijit/form/DropDownButton" data-dojo-props="iconClass:'dijitIconEdit'">
-                                            <span>Drop Down</span>
+                                            <div data-dojo-type="dijit/form/DropDownButton" data-dojo-props="iconClass:'dijitIconEdit'">
+                                                <span>Drop Down</span>
 
-                                            <div data-dojo-type="dijit/Menu" id="editMenu1" style="display: none;">
-                                                <div data-dojo-type="dijit/MenuItem" data-dojo-props="
+                                                <div data-dojo-type="dijit/Menu" id="editMenu1" style="display: none;">
+                                                    <div data-dojo-type="dijit/MenuItem" data-dojo-props="
 							iconClass:'dijitIconCut',
 							onClick:function(){ console.debug('not actually cutting anything, just a test!') }
 						">Cut
-                                                </div>
+                                                    </div>
 
-                                                <div data-dojo-type="dijit/MenuItem" data-dojo-props="
+                                                    <div data-dojo-type="dijit/MenuItem" data-dojo-props="
 							iconClass:'dijitIconCopy',
 							onClick:function(){ console.debug('not actually copying anyything, just a test!'); }
 						">Copy
-                                                </div>
+                                                    </div>
 
-                                                <div data-dojo-type="dijit/MenuItem" data-dojo-props="
+                                                    <div data-dojo-type="dijit/MenuItem" data-dojo-props="
 							iconClass:'dijitIconPaste',
 							onClick:function(){ console.debug('not actually pasting anyything, just a test!'); }
 						">Paste
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
 
-                                        <div data-dojo-type="dijit/form/ComboButton" data-dojo-props='iconClass:"dijitIconSave", optionsTitle:"save options", onClick:function(){ console.log("clicked combo save"); }'>
-                                            <span>Combo</span>
+                                            <div data-dojo-type="dijit/form/ComboButton" data-dojo-props='iconClass:"dijitIconSave", optionsTitle:"save options", onClick:function(){ console.log("clicked combo save"); }'>
+                                                <span>Combo</span>
 
-                                            <div data-dojo-type="dijit/Menu" id="saveMenu1" style="display: none;">
-                                                <div data-dojo-type="dijit/MenuItem" data-dojo-props="
+                                                <div data-dojo-type="dijit/Menu" id="saveMenu1" style="display: none;">
+                                                    <div data-dojo-type="dijit/MenuItem" data-dojo-props="
 							iconClass:'dijitIconSave',
 							onClick: function(){ console.debug('not actually saving anything, just a test!') }
 						">Save
-                                                </div>
-                                                <div data-dojo-type="dijit/MenuItem" data-dojo-props="
+                                                    </div>
+                                                    <div data-dojo-type="dijit/MenuItem" data-dojo-props="
 							onClick: function(){ console.debug('not actually saving anything, just a test!') }
 						">Save As
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
 
-                                        <div data-dojo-type="dijit/form/ToggleButton" data-dojo-props="
+                                            <div data-dojo-type="dijit/form/ToggleButton" data-dojo-props="
 					checked:true, 
 					onChange: function(a){ console.log('toggle button checked=' + a); }, iconClass:'dijitCheckBoxIcon'
 				"> Toggle
-                                        </div>
+                                            </div>
 
-                                        <hr class="spacer"> Disabled:
+                                            <hr class="spacer">Disabled:
 
-                                        <button data-dojo-type="dijit/form/Button" data-dojo-props='iconClass:"dijitIconTask", disabled:true' disabled>
-                                            Simple
-                                        </button>
+                                            <button data-dojo-type="dijit/form/Button" data-dojo-props='iconClass:"dijitIconTask", disabled:true' disabled>
+                                                Simple
+                                            </button>
 
-                                        <div data-dojo-type="dijit/form/DropDownButton" data-dojo-props='iconClass:"dijitIconEdit", disabled:true'>
-                                            <span>Drop Down</span>
-                                            <ul data-dojo-type="dijit/Menu" id="editMenu2" style="display: none;">
-                                                <li data-dojo-type="dijit/MenuItem" data-dojo-props="
+                                            <div data-dojo-type="dijit/form/DropDownButton" data-dojo-props='iconClass:"dijitIconEdit", disabled:true'>
+                                                <span>Drop Down</span>
+                                                <ul data-dojo-type="dijit/Menu" id="editMenu2" style="display: none;">
+                                                    <li data-dojo-type="dijit/MenuItem" data-dojo-props="
 							iconClass:'dijitIconCut',
 							onClick: function(){ console.debug('not actually cutting anything, just a test!') }
 						">Cut
-                                                </li>
+                                                    </li>
 
-                                                <li data-dojo-type="dijit/MenuItem" data-dojo-props="
+                                                    <li data-dojo-type="dijit/MenuItem" data-dojo-props="
 							iconClass:'dijitIconCopy',
 							onClick: function(){ console.debug('not actually copying anything, just a test!') }
 						">Copy
-                                                </li>
+                                                    </li>
 
-                                                <li data-dojo-type="dijit/MenuItem" data-dojo-props="
+                                                    <li data-dojo-type="dijit/MenuItem" data-dojo-props="
 							iconClass:'dijitIconPaste',
 							onClick: function(){ console.debug('not actually pasting anything, just a test!') }
 						">Paste
-                                                </li>
-                                            </ul>
-                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
 
-                                        <div data-dojo-type="dijit/form/ComboButton" data-dojo-props="iconClass:'dijitIconSave', optionsTitle:'save options', disabled:true">
-                                            <span>Combo</span>
+                                            <div data-dojo-type="dijit/form/ComboButton" data-dojo-props="iconClass:'dijitIconSave', optionsTitle:'save options', disabled:true">
+                                                <span>Combo</span>
 
-                                            <div data-dojo-type="dijit/Menu" id="saveMenu2" style="display: none;">
-                                                <div data-dojo-type="dijit/MenuItem" data-dojo-props="
+                                                <div data-dojo-type="dijit/Menu" id="saveMenu2" style="display: none;">
+                                                    <div data-dojo-type="dijit/MenuItem" data-dojo-props="
 							iconCLass:'dijitIconSave',
 							onClick:function(){ console.log('not actually saving anything, just a test!' ); }
 						">Save
-                                                </div>
-                                                <div data-dojo-type="dijit/MenuItem" onClick="console.debug('not actually saving anything, just a test!')">
-                                                    Save As
+                                                    </div>
+                                                    <div data-dojo-type="dijit/MenuItem" onClick="console.debug('not actually saving anything, just a test!')">
+                                                        Save As
+                                                    </div>
                                                 </div>
                                             </div>
+
+                                            <button data-dojo-type="dijit/form/ToggleButton" data-dojo-props="checked:true, disabled:true, iconClass:'dijitCheckBoxIcon'">
+                                                Toggle
+                                            </button>
+                                        </section>
+
+                                        <section id="nav-checkboxes">
+                                            <h2>CheckBox</h2>
+                                            <fieldset>
+                                                <input id="check1" type="checkBox" data-dojo-type="dijit/form/CheckBox">
+                                                <label for="check1">unchecked</label>
+
+                                                <input id="check2" type="checkBox" data-dojo-type="dijit/form/CheckBox" data-dojo-props="checked:true" checked="checked">
+                                                <label for="check2">checked</label>
+
+                                                <input id="check3" type="checkBox" data-dojo-type="dijit/form/CheckBox" data-dojo-props='disabled:true' disabled>
+                                                <label for="check3">disabled</label>
+
+                                                <input id="check4" type="checkBox" data-dojo-type="dijit/form/CheckBox" data-dojo-props='disabled:true, checked:true' checked="checked" disabled>
+                                                <label for="check4">disabled and checked</label>
+                                            </fieldset>
+                                        </section>
+
+                                        <section id="nav-radiobuttons">
+                                            <h2>Radio Buttons</h2>
+                                            <fieldset>
+                                                <input type="radio" name="g1" id="g1rb1" value="news" data-dojo-type="dijit/form/RadioButton">
+                                                <label for="g1rb1">news</label>
+                                                <input type="radio" name="g1" id="g1rb2" value="talk" data-dojo-type="dijit/form/RadioButton" data-dojo-props='checked:true' checked>
+                                                <label for="g1rb2">talk</label>
+                                                <input type="radio" name="g1" id="g1rb3" value="weather" data-dojo-type="dijit/form/RadioButton" data-dojo-props='disabled:true' disabled>
+                                                <label for="g1rb3">weather <span dir="ltr">(disabled)</span>
+                                                </label>
+                                            </fieldset>
+                                        </section>
+                                        <section id="nav-datetextbox">
+                                            <h2>dijit/form/DateTextBox</h2>
+                                            <label for="date1">Enabled w/placeHolder:</label>
+                                            <input id="date1" name="date1" type="text" data-dojo-type="dijit/form/DateTextBox" data-dojo-props="placeHolder:'Birthday'">
+                                            <label for="date2">Disabled w/placeHolder:</label>
+                                            <input id="date2" name="date2" type="text" data-dojo-type="dijit/form/DateTextBox" data-dojo-props='placeHolder:"Birthday", disabled:true'>
+                                            <label for="date2">Disabled w/value:</label>
+                                            <input id="date3" name="date3" type="text" data-dojo-type="dijit/form/DateTextBox" data-dojo-props='value:"2008-12-25", disabled:true'>
+                                        </section>
+                                        <section id="nav-timetextbox">
+                                            <h2>dijit/form/TimeTextBox</h2>
+                                            <label for="time1">Enabled:</label>
+                                            <input id="time1" name="time1" type="text" data-dojo-type="dijit/form/TimeTextBox" value="T17:45:00">
+                                            <label for="time2">Disabled:</label>
+                                            <input id="time2" name="time2" type="text" data-dojo-type="dijit/form/TimeTextBox" value="T17:45:00" data-dojo-props='disabled:true' disabled>
+
+                                        </section>
+                                        <section id="nav-currencytextbox">
+                                            <h2>dijit/form/CurrencyTextBox</h2>
+                                            <label for="currency1">Enabled:</label>
+                                            <input id="currency1" type="text" name="income1" value="54775.53" data-dojo-type="dijit/form/CurrencyTextBox" data-dojo-props="
+						required:true, constraints:{ fractional:true }, currency:'USD',
+						value:54775.53,
+						invalidMessage:'Invalid amount.	 Include dollar sign, commas, and cents.  Cents are mandatory.'
+				">
+                                            <label for="currency2">Disabled:</label>
+                                            <input id="currency2" type="text" name="income1" value="54775.53" data-dojo-type="dijit/form/CurrencyTextBox" data-dojo-props="required:true, constraints:{ fractional:true },
+						currency:'USD', invalidMessage:'Invalid amount.	 Include dollar sign, commas, and cents.  Cents are mandatory.',
+						disabled:true
+				">
+
+                                            <hr class="spacer">
+
+                                        </section>
+                                        <section id="nav-numberspinner">
+                                            <h2>dijit/form/NumberSpinner max=100</h2>
+                                            <label for="spinner1">Enabled: </label>
+                                            <input data-dojo-type="dijit/form/NumberSpinner" data-dojo-props='constraints:{max:100,places:0}, value:10' id="spinner1">
+                                            <label for="spinner2">Disabled: </label>
+                                            <input data-dojo-type="dijit/form/NumberSpinner" data-dojo-props='constraints:{max:100,places:0}, value:10, disabled:true' id="spinner2">
+
+                                        </section>
+                                        <section id="nav-select">
+                                            <h2>dijit/form/Select</h2>
+                                            <!-- fixme: <label for=""> but target a form element like input select etc -->
+                                            <label>Enabled:</label>
+
+                                            <div id="selectEnabled" data-dojo-type="dijit/form/Select" data-dojo-props="value:'AK'">
+                                                <span data-dojo-value="AL"><b>Alabama</b></span>
+                                                <span data-dojo-value="AK"><span style="color:red">A</span><span style="color:orange">l</span><span style="color:yellow">a</span><span style="color:green">s</span><span style="color:blue">k</span><span style="color:purple">a</span></span>
+                                                <span data-dojo-value="AZ"><i>Arizona</i></span>
+                                                <span data-dojo-value="AR"><span class="ark">Arkansas</span></span>
+                                                <span data-dojo-value="CA"><span style="font-size:25%">C</span><span style="font-size:50%">a</span><span style="font-size:75%">l</span><span style="font-size:90%">i</span><span style="font-size:100%">f</span><span style="font-size:125%">o</span><span style="font-size:133%">r</span><span style="font-size:150%">n</span><span style="font-size:175%">i</span><span style="font-size:200%">a</span></span>
+                                                <span data-dojo-value="NM">New<br>&nbsp;&nbsp;Mexico</span>
+                                            </div>
+
+                                            <label>Disabled: </label>
+
+                                            <div id="selectDisabled" data-dojo-props="value:'AK', disabled:true" data-dojo-type="dijit/form/Select">
+                                                <span data-dojo-value="AL"><b>Alabama</b></span>
+                                                <span data-dojo-value="AK"><span style="color:red">A</span><span style="color:orange">l</span><span style="color:yellow">a</span><span style="color:green">s</span><span style="color:blue">k</span><span style="color:purple">a</span></span>
+                                                <span data-dojo-value="AZ"><i>Arizona</i></span>
+                                                <span data-dojo-value="AR"><span class="ark">Arkansas</span></span>
+                                                <span data-dojo-value="CA"><span style="font-size:25%">C</span><span style="font-size:50%">a</span><span style="font-size:75%">l</span><span style="font-size:90%">i</span><span style="font-size:100%">f</span><span style="font-size:125%">o</span><span style="font-size:133%">r</span><span style="font-size:150%">n</span><span style="font-size:175%">i</span><span style="font-size:200%">a</span></span>
+                                                <span data-dojo-value="NM">New<br>&nbsp;&nbsp;Mexico</span>
+                                            </div>
+
+                                            <hr class="spacer">
+
+                                        </section>
+                                        <section id="nav-filteringselect">
+                                            <h2>dijit/form/FilteringSelect</h2>
+                                            <label for="filteringSelect">Enabled w/placeHolder: </label>
+                                            <input id="filteringSelect" data-dojo-type="dijit/form/FilteringSelect" data-dojo-props="
+					placeHolder:'place',
+					store:continentStore,
+					searchAttr:'name',
+					name:'state2'
+				">
+
+                                            <label for="filteringSelect2">Disabled w/placeHolder: </label>
+                                            <input id="filteringSelect2" data-dojo-type="dijit/form/FilteringSelect" data-dojo-props="
+					disabled:true, store:continentStore, name:'state2', searchAttr:'name'
+				">
+
+                                            <label for="filteringSelect3">Disabled w/value: </label>
+                                            <input id="filteringSelect3" data-dojo-type="dijit/form/FilteringSelect" data-dojo-props="
+					store: continentStore, searchAttr:'name', disabled:true, value:'CA'
+				">
+
+                                        </section>
+                                        <section id="nav-textarea">
+                                            <!--	&#8234; and &#8236; are inserted solely for testing purposes to mark the beginning and end of left-to-right text so that
+		cogniscent browsers don't render garbled punctuation nor exhibit strange home/end key behavior while in right-to-left mode -->
+                                            <h2>dijit/form/Textarea</h2>
+
+                                            <p>Enabled:</p>
+                                            <textarea data-dojo-type="dijit/form/Textarea" data-dojo-props='name:"areText"' name="areText">This text area will expand and contract as you type &#8234;text.&#8236; Lorem ipsum dolor sit &#8234;amet,&#8236; consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo &#8234;consequat.&#8236;
+                                            </textarea>
+
+                                            <br>
+
+                                            <p>Disabled:</p>
+                                            <textarea data-dojo-type="dijit/form/Textarea" data-dojo-props="disabled: true">This text area is disabled and you shouldn't be able to type in &#8234;it.&#8236;
+                                            </textarea>
+
+                                        </section>
+                                        <section id="nav-simpletextarea">
+                                            <h2>dijit/form/SimpleTextarea</h2>
+
+                                            <p></p>
+
+                                            <p>Enabled:</p>
+                                            <textarea data-dojo-type="dijit/form/SimpleTextarea">This text area has a constant height and displays a scrollbar when &#8234;necessary.&#8236; Lorem ipsum dolor sit &#8234;amet,&#8236; consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie &#8234;consequat,&#8236; vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla &#8234;facilisi.&#8236;
+                                            </textarea>
+
+                                            <p>Disabled:</p>
+                                            <textarea data-dojo-type="dijit/form/SimpleTextarea" data-dojo-props="disabled: true">Lorem ipsum dolor sit &#8234;amet,&#8236; consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie &#8234;consequat,&#8236; vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla &#8234;facilisi.&#8236;
+                                            </textarea>
+                                        </section>
+
+                                        </section>
+                                        <section id="nav-inlineedittextbox">
+
+                                            <h2 class="testTitle">dijit/InlineEditBox + dijit/form/TextBox on span</h2>
+                                            <span id="editable" style="font-size:larger;" data-dojo-type="dijit/InlineEditBox">
+                                                Edit me - I trigger the onChange callback
+                                        </span>
+
+                                        </section>
+                                        <section id="nav-inlineedittextarea">
+                                            <h2>dijit/InlineEditBox + dijit/form/Textarea</h2>
+                                            <p id="areaEditable" data-dojo-type="dijit/InlineEditBox" data-dojo-props='editor: "dijit/form/Textarea", autoSave:false'>
+                                                I'm one big &#8234;paragraph.&#8236; Go ahead and edit &#8234;me.&#8236; I dare &#8234;you.&#8236; The quick brown fox jumped over the lazy &#8234;dog.&#8236; Blah blah blah blah blah blah &#8234;blah ...&#8236;
+                                            </p>
+                                        </section>
+
+
+
+
+                                    </div>
+                                    <!-- end of basic select widgets -->
+
+                                    <div id="otherWidgetsTab" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="title:'Other Widgets', style:'padding:10px;display:none;'">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <h2 id="nav-"></h2>
+
+                                            </div>
+                                            <div class="col-2 sidebar-nav">
+                                                <h2>Navigation</h2>
+                                                <ul class="nav">
+                                                    <li><a href="#nav-typography">Typohrapy</a>
+                                                    </li>
+                                                    <li><a href="#nav-tables">Tables</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
                                         </div>
-
-                                        <button data-dojo-type="dijit/form/ToggleButton" data-dojo-props="checked:true, disabled:true, iconClass:'dijitCheckBoxIcon'">
-                                            Toggle
-                                        </button>
-
-                                        <hr class="spacer">
-
-                                        <h2 id="nav-checkboxes">CheckBox</h2>
-                                        <fieldset>
-                                            <input id="check1" type="checkBox" data-dojo-type="dijit/form/CheckBox">
-                                            <label for="check1">unchecked</label>
-
-                                            <input id="check2" type="checkBox" data-dojo-type="dijit/form/CheckBox" data-dojo-props="checked:true" checked="checked">
-                                            <label for="check2">checked</label>
-
-                                            <input id="check3" type="checkBox" data-dojo-type="dijit/form/CheckBox" data-dojo-props='disabled:true' disabled>
-                                            <label for="check3">disabled</label>
-
-                                            <input id="check4" type="checkBox" data-dojo-type="dijit/form/CheckBox" data-dojo-props='disabled:true, checked:true' checked="checked" disabled>
-                                            <label for="check4">disabled and checked</label>
-                                        </fieldset>
-
-                                        <h2 id="nav-radiobuttons">Radio Buttons</h2>
-                                        <fieldset>
-                                            <input type="radio" name="g1" id="g1rb1" value="news" data-dojo-type="dijit/form/RadioButton">
-                                            <label for="g1rb1">news</label>
-                                            <input type="radio" name="g1" id="g1rb2" value="talk" data-dojo-type="dijit/form/RadioButton" data-dojo-props='checked:true' checked>
-                                            <label for="g1rb2">talk</label>
-                                            <input type="radio" name="g1" id="g1rb3" value="weather" data-dojo-type="dijit/form/RadioButton" data-dojo-props='disabled:true' disabled>
-                                            <label for="g1rb3">weather <span dir="ltr">(disabled)</span>
-                                            </label>
-                                        </fieldset>
                                     </div>
                                     <div class="col-2 sidebar-nav">
                                         <h2>Navigation</h2>
@@ -679,134 +843,269 @@
                                             </li>
                                             <li><a href="#nav-checkboxes">Checkboxes</a>
                                             </li>
-                                            <li><a href="#nav-radiobuttons">Radio Buttons</a>
+                                            <li><a href="#nav-datetextbox">DateTextBox</a>
                                             </li>
+                                            <li><a href="#nav-timetextbox">TimeTextBox</a>
+                                            </li>
+                                            <li><a href="#nav-currencytextbox">CurrencyTextBox</a>
+                                            </li>
+                                            <li><a href="#nav-numberspinner">NumberSpinner</a>
+                                            </li>
+                                            <li><a href="#nav-select">Select</a>
+                                            </li>
+                                            <li><a href="#nav-filteringselect">FilteringSelect</a>
+                                            </li>
+                                            <li><a href="#nav-textarea">TextArea</a>
+                                            </li>
+                                            <li><a href="#nav-simpletextarea">SimpleTextArea</a>
+                                            </li>
+                                            <li><a href="#nav-inlineedittextbox">SimpleTextArea</a>
+                                            </li>
+                                            <li><a href="#nav-inlineedittextarea">InlineEditTextArea</a>
+                                            </li>
+
+
                                         </ul>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <!-- end of basic form widgets -->
+                        <div id="layoutTab" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="title:'Layout Elements', style:'padding:10px;display:none;'">
+                            <div class="row">
+                                <div class="col-6">
+                                    <h2 id="nav-"></h2>
 
-                        <div id="textboxTab" data-dojo-type="dijit/layout/ContentPane" data-dojo-props='title:"Text Input Widgets", style:"padding:10px;display:none;"'>
+                                </div>
+                                <div class="col-2 sidebar-nav">
+                                    <h2>Navigation</h2>
+                                    <ul class="nav">
+                                        <li><a href="#nav-typography">BorderContainer</a>
+                                        </li>
+                                        <li><a href="#nav-tables">Accordeon</a>
+                                        </li>
+                                        <li><a href="#nav-titlepane">TitlePane</a>
+                                        </li>
+                                        <li><a href="#nav-tables">Tree</a>
+                                        </li>
+                                    </ul>
+                                </div>
 
-                            <h2>dijit/form/DateTextBox</h2>
-                            <label for="date1">Enabled w/placeHolder:</label>
-                            <input id="date1" name="date1" type="text" data-dojo-type="dijit/form/DateTextBox" data-dojo-props="placeHolder:'Birthday'">
-                            <label for="date2">Disabled w/placeHolder:</label>
-                            <input id="date2" name="date2" type="text" data-dojo-type="dijit/form/DateTextBox" data-dojo-props='placeHolder:"Birthday", disabled:true'>
-                            <label for="date2">Disabled w/value:</label>
-                            <input id="date3" name="date3" type="text" data-dojo-type="dijit/form/DateTextBox" data-dojo-props='value:"2008-12-25", disabled:true'>
-
-                            <h2>dijit/form/TimeTextBox</h2>
-                            <label for="time1">Enabled:</label>
-                            <input id="time1" name="time1" type="text" data-dojo-type="dijit/form/TimeTextBox" value="T17:45:00">
-                            <label for="time2">Disabled:</label>
-                            <input id="time2" name="time2" type="text" data-dojo-type="dijit/form/TimeTextBox" value="T17:45:00" data-dojo-props='disabled:true' disabled>
-
-                            <h2>dijit/form/CurrencyTextBox</h2>
-                            <label for="currency1">Enabled:</label>
-                            <input id="currency1" type="text" name="income1" value="54775.53" data-dojo-type="dijit/form/CurrencyTextBox" data-dojo-props="
-						required:true, constraints:{ fractional:true }, currency:'USD',
-						value:54775.53,
-						invalidMessage:'Invalid amount.	 Include dollar sign, commas, and cents.  Cents are mandatory.'
-				">
-                            <label for="currency2">Disabled:</label>
-                            <input id="currency2" type="text" name="income1" value="54775.53" data-dojo-type="dijit/form/CurrencyTextBox" data-dojo-props="required:true, constraints:{ fractional:true },
-						currency:'USD', invalidMessage:'Invalid amount.	 Include dollar sign, commas, and cents.  Cents are mandatory.',
-						disabled:true
-				">
-
-                            <hr class="spacer">
-
-                            <h2>dijit/form/NumberSpinner max=100</h2>
-                            <label for="spinner1">Enabled: </label>
-                            <input data-dojo-type="dijit/form/NumberSpinner" data-dojo-props='constraints:{max:100,places:0}, value:10' id="spinner1">
-                            <label for="spinner2">Disabled: </label>
-                            <input data-dojo-type="dijit/form/NumberSpinner" data-dojo-props='constraints:{max:100,places:0}, value:10, disabled:true' id="spinner2">
-
-                        </div>
-                        <!-- end of basic textbox widgets -->
-                        <div id="textareaTab" data-dojo-type="dijit/layout/ContentPane" data-dojo-props='title:"Textarea", style:"padding:10px;"'>
-
-                            <!--	&#8234; and &#8236; are inserted solely for testing purposes to mark the beginning and end of left-to-right text so that
-		cogniscent browsers don't render garbled punctuation nor exhibit strange home/end key behavior while in right-to-left mode -->
-                            <h2>dijit/form/Textarea</h2>
-
-                            <p>Enabled:</p>
-                            <textarea data-dojo-type="dijit/form/Textarea" data-dojo-props='name:"areText"' name="areText">This text area will expand and contract as you type &#8234;text.&#8236; Lorem ipsum dolor sit &#8234;amet,&#8236; consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo &#8234;consequat.&#8236;
-                            </textarea>
-
-                            <br>
-
-                            <p>Disabled:</p>
-                            <textarea data-dojo-type="dijit/form/Textarea" data-dojo-props="disabled: true">This text area is disabled and you shouldn't be able to type in &#8234;it.&#8236;
-                            </textarea>
-
-
-                            <h2>dijit/form/SimpleTextarea</h2>
-
-                            <p></p>
-
-                            <p>Enabled:</p>
-                            <textarea data-dojo-type="dijit/form/SimpleTextarea">This text area has a constant height and displays a scrollbar when &#8234;necessary.&#8236; Lorem ipsum dolor sit &#8234;amet,&#8236; consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie &#8234;consequat,&#8236; vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla &#8234;facilisi.&#8236;
-                            </textarea>
-
-                            <p>Disabled:</p>
-                            <textarea data-dojo-type="dijit/form/SimpleTextarea" data-dojo-props="disabled: true">Lorem ipsum dolor sit &#8234;amet,&#8236; consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie &#8234;consequat,&#8236; vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla &#8234;facilisi.&#8236;
-                            </textarea>
-                        </div>
-                        <!-- end of Textarea tab -->
-
-                        <div id="selectTab" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="title:'Select Widgets', style:'padding:10px;display:none;'">
-
-                            <h2>dijit/form/Select</h2>
-                            <!-- fixme: <label for=""> but target a form element like input select etc -->
-                            <label>Enabled:</label>
-
-                            <div id="selectEnabled" data-dojo-type="dijit/form/Select" data-dojo-props="value:'AK'">
-                                <span data-dojo-value="AL"><b>Alabama</b></span>
-                                <span data-dojo-value="AK"><span style="color:red">A</span><span style="color:orange">l</span><span style="color:yellow">a</span><span style="color:green">s</span><span style="color:blue">k</span><span style="color:purple">a</span></span>
-                                <span data-dojo-value="AZ"><i>Arizona</i></span>
-                                <span data-dojo-value="AR"><span class="ark">Arkansas</span></span>
-                                <span data-dojo-value="CA"><span style="font-size:25%">C</span><span style="font-size:50%">a</span><span style="font-size:75%">l</span><span style="font-size:90%">i</span><span style="font-size:100%">f</span><span style="font-size:125%">o</span><span style="font-size:133%">r</span><span style="font-size:150%">n</span><span style="font-size:175%">i</span><span style="font-size:200%">a</span></span>
-                                <span data-dojo-value="NM">New<br>&nbsp;&nbsp;Mexico</span>
                             </div>
-
-                            <label>Disabled: </label>
-
-                            <div id="selectDisabled" data-dojo-props="value:'AK', disabled:true" data-dojo-type="dijit/form/Select">
-                                <span data-dojo-value="AL"><b>Alabama</b></span>
-                                <span data-dojo-value="AK"><span style="color:red">A</span><span style="color:orange">l</span><span style="color:yellow">a</span><span style="color:green">s</span><span style="color:blue">k</span><span style="color:purple">a</span></span>
-                                <span data-dojo-value="AZ"><i>Arizona</i></span>
-                                <span data-dojo-value="AR"><span class="ark">Arkansas</span></span>
-                                <span data-dojo-value="CA"><span style="font-size:25%">C</span><span style="font-size:50%">a</span><span style="font-size:75%">l</span><span style="font-size:90%">i</span><span style="font-size:100%">f</span><span style="font-size:125%">o</span><span style="font-size:133%">r</span><span style="font-size:150%">n</span><span style="font-size:175%">i</span><span style="font-size:200%">a</span></span>
-                                <span data-dojo-value="NM">New<br>&nbsp;&nbsp;Mexico</span>
-                            </div>
-
-                            <hr class="spacer">
-
-                            <h2>dijit/form/FilteringSelect</h2>
-                            <label for="filteringSelect">Enabled w/placeHolder: </label>
-                            <input id="filteringSelect" data-dojo-type="dijit/form/FilteringSelect" data-dojo-props="
-					placeHolder:'place',
-					store:continentStore,
-					searchAttr:'name',
-					name:'state2'
-				">
-
-                            <label for="filteringSelect2">Disabled w/placeHolder: </label>
-                            <input id="filteringSelect2" data-dojo-type="dijit/form/FilteringSelect" data-dojo-props="
-					disabled:true, store:continentStore, name:'state2', searchAttr:'name'
-				">
-
-                            <label for="filteringSelect3">Disabled w/value: </label>
-                            <input id="filteringSelect3" data-dojo-type="dijit/form/FilteringSelect" data-dojo-props="
-					store: continentStore, searchAttr:'name', disabled:true, value:'CA'
-				">
-
                         </div>
-                        <!-- end of basic select widgets -->
+                        <!-- end of layout elements -->
+                        <div id="variousTab" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="title:'Varius Dijits Elements', style:'padding:10px;display:none;'">
+                            <div class="row">
+                                <div class="col-6">
+                                    <section id="nav-dnd">
+                                        <div style="display: inline-block; margin:5px;">
+                                            <h3>Vertical Source</h3>
+
+                                            <div data-dojo-type="dojo/dnd/Source" style="border:3px solid #ccc; padding: 1em 3em; ">
+                                                <div class="dojoDndItem">Item <strong>X</strong>
+                                                </div>
+                                                <div class="dojoDndItem">Item <strong>Y</strong>
+                                                </div>
+                                                <div class="dojoDndItem">Item <strong>Z</strong>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div style="display: inline-block; margin:5px; ">
+                                            <h3>Horizontal</h3>
+
+                                            <div data-dojo-type="dojo/dnd/Source" data-dojo-props="horizontal: true" style="border:3px solid #ccc; padding: 1em 3em; ">
+                                                <div class="dojoDndItem">Item <strong>1</strong>
+                                                </div>
+                                                <div class="dojoDndItem">Item <strong>2</strong>
+                                                </div>
+                                                <div class="dojoDndItem">Item <strong>3</strong>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </section>
+
+
+                                    <section id="nav-editor">
+                                        <h2>Editor</h2>
+                                        <p>Enabled:</p>
+                                        <!-- FIXME:
+		set height on this node to size the whole editor, but causes the tab to not scroll
+		until you select another tab and come back. alternative is no height: here, but that
+		causes editor to become VERY tall, and size to a normal height when selected (like the
+		dijit/form/TextArea in "Form Feel" Tab), but in reverse. refs #3980 and is maybe new bug?
+	-->
+                                        <div data-dojo-type="dijit/Editor" data-dojo-props="height:175, extraPlugins:['|', 'createLink', 'fontName'], styleSheets:'bower_components/dijit/themes/claro/document.css'">
+                                            <ul>
+                                                <li>Lorem <a href="http://dojotoolkit.org">and a link</a>, what do you think?</li>
+                                                <li>This is the Editor with a Toolbar attached.</li>
+                                            </ul>
+                                        </div>
+                                        <p>Disabled:</p>
+
+                                        <div data-dojo-type="dijit/Editor" data-dojo-props="height:175, extraPlugins:['|', 'createLink', 'fontName'], styleSheets:'bower_components/dijit/themes/claro/document.css', disabled:true">
+                                            <ul>
+                                                <li>Lorem <a href="http://dojotoolkit.org">and a link</a>, what do you think?</li>
+                                                <li>This is the Editor with a Toolbar attached.</li>
+                                            </ul>
+                                        </div>
+                                    </section>
+
+                                    <section id="nav-progressbar">
+                                        <h2>ProgressBar</h2>
+
+                                        <div data-dojo-props="maximum:200, value:20" id="setTestBar" data-dojo-type="dijit/ProgressBar"></div>
+
+                                        Indeterminate:
+                                        <div id="indTestBar" data-dojo-props="indeterminate:true" data-dojo-type="dijit/ProgressBar"></div>
+                                    </section>
+                                    <section id="nav-colorpalette">
+                                        <h2 class="testHeader">ColorPalette</h2>
+
+                                        <div data-dojo-type="dijit/ColorPalette" data-dojo-props=""></div>
+                                    </section>
+
+                                    <section id="nav-slider">
+                                        <h2>Slider</h2>
+                                        <h2>Enabled</h2>
+
+                                        <div style="float:right;">
+                                            <div id='slider2' data-dojo-type="dijit/form/VerticalSlider" data-dojo-props="
+						onChange: function(a){ dom.byId('slider2input').value = a; },
+						value:10, maximum:100, minimum:0, discreetValues:11, style:'height:176px; clear:both'
+					">
+                                                <ol data-dojo-type="dijit/form/VerticalRuleLabels" data-dojo-props="container:'leftDecoration', style:'width:2em;', labelStyle:'right:0px;'">
+                                                    <li>0
+                                                        <li>100
+                                                </ol>
+
+                                                <div data-dojo-type="dijit/form/VerticalRule" data-dojo-props="container:'leftDecoration', style:'width:5px;', count:11"></div>
+                                                <div data-dojo-type="dijit/form/VerticalRule" data-dojo-props="container:'rightDecoration', style:'width:5px;', count:11"></div>
+                                                <ol data-dojo-type="dijit/form/VerticalRuleLabels" data-dojo-props="container:'rightDecoration', style:'width:2em;', maximum:100, count:6, numericMargin:1, constraints:{ pattern:'#' }"></ol>
+                                            </div>
+                                            <br> Slider2 Value:
+                                            <input disabled id="slider2input" size="3" value="10" autocomplete="off">
+                                        </div>
+
+                                        <div id="horizontal1" data-dojo-type="dijit/form/HorizontalSlider" data-dojo-props="
+					value:10, maximum:100, minimum:0, showButtons:false, intermediateChanges:true, style:'width:50%; height:20px',
+					onChange: function(a){ dom.byId('slider1input').value = dojo.number.format(a / 100, { places:1, pattern:'#%' }) }
+				">
+                                            <ol data-dojo-type="dijit/form/HorizontalRuleLabels" data-dojo-props='container:"topDecoration", style:"height:1.2em;font-size:75%;", numericMargin:1, count:6'></ol>
+                                            <div data-dojo-type="dijit/form/HorizontalRule" data-dojo-props='container:"topDecoration", count:11, style:"height:5px;"'></div>
+                                            <div data-dojo-type="dijit/form/HorizontalRule" data-dojo-props='container:"bottomDecoration", count:5, style:"height:5px;"'></div>
+                                            <ol data-dojo-type="dijit/form/HorizontalRuleLabels" data-dojo-props='container:"bottomDecoration", style:"height:1em;font-size:75%;"'>
+                                                <li>lowest
+                                                    <li>normal
+                                                        <li>highest
+                                            </ol>
+                                        </div>
+                                        <br>Value:
+                                        <input disabled id="slider1input" size="5" value="10.0%" autocomplete="off">
+
+                                        <div id="horizontal2" data-dojo-type="dijit/form/HorizontalSlider" data-dojo-props="
+					minimum:1, value:2, maximum:3, discreteValues:3, showButtons:false, intermediateChanges:true,
+					style:'width:300px; height:40px'
+				">
+                                            <div data-dojo-type="dijit/form/HorizontalRule" data-dojo-props='container:"bottomDecoration", count:3, style:"height:5px;"'></div>
+                                            <ol data-dojo-type="dijit/form/HorizontalRuleLabels" data-dojo-props='container:"bottomDecoration", style:"height:1em;font-size:75%;"'>
+                                                <li><img width=10 height=10 src="bower_components/dijit/tests/images/note.gif">
+                                                    <br><span style="font-size: small">small</span>
+                                                    <li><img width=15 height=15 src="bower_components/dijit/tests/images/note.gif">
+                                                        <br><span style="font-size: medium">medium</span>
+                                                        <li><img width=20 height=20 src="bower_components/dijit/tests/images/note.gif">
+                                                            <br><span style="font-size: large">large</span>
+                                            </ol>
+                                        </div>
+
+                                        <h2 style="clear:both">Disabled</h2>
+
+                                        <div style="float:right;">
+                                            <div data-dojo-type="dijit/form/VerticalSlider" data-dojo-props="
+						value:10, maximum:100, minimum:0, discreteValues:11, 
+						style:'height:175px; clear:both', disabled:true
+					">
+                                                <ol data-dojo-type="dijit/form/VerticalRuleLabels" data-dojo-props='container:"leftDecoration", style:"width:2em;", labelStyle:"right:0px;"'>
+                                                    <li>0
+                                                        <li>100
+                                                </ol>
+
+                                                <div data-dojo-type="dijit/form/VerticalRule" data-dojo-props='container:"leftDecoration", count:11, style:"width:5px;"'></div>
+                                                <div data-dojo-type="dijit/form/VerticalRule" data-dojo-props='container:"rightDecoration", count:11, style:"width:5px;"'></div>
+                                                <ol data-dojo-type="dijit/form/VerticalRuleLabels" data-dojo-props='container:"rightDecoration", style:"width:2em;", maximum:100, count:6, numericMargin:1, constraints:{ pattern:"#"}'></ol>
+                                            </div>
+                                        </div>
+
+                                        <div data-dojo-type="dijit/form/HorizontalSlider" id="hs-1width" data-dojo-props="
+					value:10, maximum:100, minimum:0, showButtons:false, intermediateChanges:true, disabled:true
+				">
+                                            <ol data-dojo-type="dijit/form/HorizontalRuleLabels" data-dojo-props='container:"topDecoration", style:"height:1.2em;font-size:75%;", numericMargin:1, count:6'></ol>
+                                            <div data-dojo-type="dijit/form/HorizontalRule" data-dojo-props='container:"topDecoration", count:11, style:"height:5px;"'></div>
+                                            <div data-dojo-type="dijit/form/HorizontalRule" data-dojo-props='container:"bottomDecoration", count:5, style:"height:5px;"'></div>
+                                            <ol data-dojo-type="dijit/form/HorizontalRuleLabels" data-dojo-props='container:"bottomDecoration", style:"height:1em;font-size:75%;"'>
+                                                <li>lowest
+                                                    <li>normal
+                                                        <li>highest
+                                            </ol>
+                                        </div>
+
+                                        <div data-dojo-type="dijit/form/HorizontalSlider" data-dojo-props="
+					minimum:1, value:2, maximum:3, discreteValues:3, showButtons:false, intermediateChanges:true,
+					style:'width:300px; height:40px', disabled:true
+				">
+                                            <div data-dojo-type="dijit/form/HorizontalRule" data-dojo-props='container:"bottomDecoration", count:3, style:"height:5px;"'></div>
+                                            <ol data-dojo-type="dijit/form/HorizontalRuleLabels" data-dojo-props='container:"bottomDecoration", style:"height:1em;font-size:75%;"'>
+                                                <li><img width=10 height=10 src="bower_components/dijit/tests/images/note.gif">
+                                                    <br><span style="font-size: small">small</span>
+                                                    <li><img width=15 height=15 src="bower_components/dijit/tests/images/note.gif">
+                                                        <br><span style="font-size: medium">medium</span>
+                                                        <li><img width=20 height=20 src="bower_components/dijit/tests/images/note.gif">
+                                                            <br><span style="font-size: large">large</span>
+                                            </ol>
+                                        </div>
+                                    </section>
+
+                                </div>
+                                <div class="col-2 sidebar-nav">
+                                    <h2>Navigation</h2>
+                                    <ul class="nav">
+                                        <li><a href="#nav-dnd">DragAndDrop</a>
+                                        </li>
+                                        <li><a href="#nav-editor">Editor</a>
+                                        </li>
+                                        <li><a href="#nav-progressbar">ProgressBar</a>
+                                        </li>
+                                        <li><a href="#nav-colorpalette">ColorPalette</a>
+                                        </li>
+                                        <li><a href="#nav-slider">Slider</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- end of layout elements -->
+                        <div id="htmlTab" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="title:'Html Elements', style:'padding:10px;display:none;'">
+                            <div class="row">
+                                <div class="col-6">
+                                    <h2 id="nav-"></h2>
+
+                                </div>
+                                <div class="col-2 sidebar-nav">
+                                    <h2>Navigation</h2>
+                                    <ul class="nav">
+                                        <li><a href="#nav-typography">Typohrapy</a>
+                                        </li>
+                                        <li><a href="#nav-tables">Tables</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- end of html elements -->
+
+
                     </div>
                     <!-- end of region="center" TabContainer -->
 
