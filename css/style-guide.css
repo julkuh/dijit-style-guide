@@ -41,3 +41,8 @@ p.description {
 .nav li {
     list-style: none;
 }
+
+section.fixed-top {
+    position: fixed;
+    top: 50px;
+}
