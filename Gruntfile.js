@@ -8,7 +8,8 @@ module.exports = function (grunt) {
         myTask: {},
 
         // connect and open dev app
-        connect: {styleguide: {
+        connect: {
+            styleguide: {
                 options: {
                     port: 3000,
                     base: './',
@@ -20,7 +21,8 @@ module.exports = function (grunt) {
 
         open: {
             styleguide: {
-                path: 'http://localhost:3000/style-guide.html'
+                path: 'http://localhost:3000/style-guide.html',
+                app: 'Chrome'
             }
         },
 
@@ -29,7 +31,7 @@ module.exports = function (grunt) {
                 options: {
                     livereload: true
                 },
-                files: ['**/*.html']
+                files: ['**/*.html', 'css/**/*.css']
             },
         }
     });

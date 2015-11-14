@@ -1,0 +1,320 @@
+/* 
+    Created on : 18.08.2015, 09:46:10
+    Author     : juku
+*/
+
+.grid-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.row:before,
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.outline,
+.outline [class*='col-'] {
+    /*TODO: To be discussed if outline style should be part of the default ct_grid.css or if it is more like demo_ct_grid.css*/
+    
+    outline: 1px solid #2f2f31;
+}
+
+[class*='col-'] {
+    float: left;
+    min-height: 1px;
+    ;
+    box-sizing: border-box;
+    padding: 8px;
+    position: relative;
+}
+
+.grid-container.no-gutter [class*='col-'] {
+    /*Selektor not working in IE9 and below*/
+    
+    padding: 0;
+}
+
+.col-1 {
+    width: 12.5%;
+}
+
+.col-2 {
+    width: 25%;
+}
+
+.col-3 {
+    width: 37.5%;
+}
+
+.col-4 {
+    width: 50%;
+}
+
+.col-5 {
+    width: 62.5%;
+}
+
+.col-6 {
+    width: 75%;
+}
+
+.col-7 {
+    width: 87.5%;
+}
+
+.col-8 {
+    width: 100%;
+}
+
+.col-offset-1 {
+    margin-left: 12.5%;
+}
+
+.col-offset-2 {
+    margin-left: 25%;
+}
+
+.col-offset-3 {
+    margin-left: 37.5%;
+}
+
+.col-offset-4 {
+    margin-left: 50%;
+}
+
+.col-offset-5 {
+    margin-left: 62.5%;
+}
+
+.col-offset-6 {
+    margin-left: 75%;
+}
+
+.col-offset-7 {
+    margin-left: 87.5%;
+}
+
+.col-offset-8 {
+    margin-left: 100%;
+}
+/*Responsive behaviour definition*/
+
+@media all and (max-width: 1000px) {
+    .col-m-1 {
+        width: 12.5%;
+    }
+    .col-m-2 {
+        width: 25%;
+    }
+    .col-m-3 {
+        width: 37.5%;
+    }
+    .col-m-4 {
+        width: 50%;
+    }
+    .col-m-5 {
+        width: 62.5%;
+    }
+    .col-m-6 {
+        width: 75%;
+    }
+    .col-m-7 {
+        width: 87.5%;
+    }
+    .col-m-8 {
+        width: 100%;
+    }
+    .col-m-offset-0 {
+        margin-left: 0;
+    }
+    .col-m-offset-1 {
+        margin-left: 12.5%;
+    }
+    .col-m-offset-2 {
+        margin-left: 25%;
+    }
+    .col-m-offset-3 {
+        margin-left: 37.5%;
+    }
+    .col-m-offset-4 {
+        margin-left: 50%;
+    }
+    .col-m-offset-5 {
+        margin-left: 62.5%;
+    }
+    .col-m-offset-6 {
+        margin-left: 75%;
+    }
+    .col-m-offset-7 {
+        margin-left: 87.5%;
+    }
+    .col-m-offset-8 {
+        margin-left: 100%;
+    }
+    .col-m-push-0 {
+        left: 0;
+    }
+    .col-m-push-1 {
+        left: 12.5%;
+    }
+    .col-m-push-2 {
+        left: 25%;
+    }
+    .col-m-push-3 {
+        left: 37.5%;
+    }
+    .col-m-push-4 {
+        left: 50%;
+    }
+    .col-m-push-5 {
+        left: 62.5%;
+    }
+    .col-m-push-6 {
+        left: 75%;
+    }
+    .col-m-push-7 {
+        left: 87.5%;
+    }
+    .col-m-push-8 {
+        left: 100%;
+    }
+    .col-m-pull-0 {
+        right: 0;
+    }
+    .col-m-pull-1 {
+        right: 12.5%;
+    }
+    .col-m-pull-2 {
+        right: 25%;
+    }
+    .col-m-pull-3 {
+        right: 37.5%;
+    }
+    .col-m-pull-4 {
+        right: 50%;
+    }
+    .col-m-pull-5 {
+        right: 62.5%;
+    }
+    .col-m-pull-6 {
+        right: 75%;
+    }
+    .col-m-pull-7 {
+        right: 87.5%;
+    }
+    .col-m-pull-8 {
+        right: 100%;
+    }
+}
+
+@media all and (max-width: 800px) {
+    .col-s-1 {
+        width: 12.5%;
+    }
+    .col-s-2 {
+        width: 25%;
+    }
+    .col-s-3 {
+        width: 37.5%;
+    }
+    .col-s-4 {
+        width: 50%;
+    }
+    .col-s-5 {
+        width: 62.5%;
+    }
+    .col-s-6 {
+        width: 75%;
+    }
+    .col-s-7 {
+        width: 87.5%;
+    }
+    .col-s-8 {
+        width: 100%;
+    }
+    .col-s-offset-0 {
+        margin-left: 0;
+    }
+    .col-s-offset-1 {
+        margin-left: 12.5%;
+    }
+    .col-s-offset-2 {
+        margin-left: 25%;
+    }
+    .col-s-offset-3 {
+        margin-left: 37.5%;
+    }
+    .col-s-offset-4 {
+        margin-left: 50%;
+    }
+    .col-s-offset-5 {
+        margin-left: 62.5%;
+    }
+    .col-s-offset-6 {
+        margin-left: 75%;
+    }
+    .col-s-offset-7 {
+        margin-left: 87.5%;
+    }
+    .col-s-offset-8 {
+        margin-left: 100%;
+    }
+    .col-s-push-0 {
+        left: 0;
+    }
+    .col-s-push-1 {
+        left: 12.5%;
+    }
+    .col-s-push-2 {
+        left: 25%;
+    }
+    .col-s-push-3 {
+        left: 37.5%;
+    }
+    .col-s-push-4 {
+        left: 50%;
+    }
+    .col-s-push-5 {
+        left: 62.5%;
+    }
+    .col-s-push-6 {
+        left: 75%;
+    }
+    .col-s-push-7 {
+        left: 87.5%;
+    }
+    .col-s-push-8 {
+        left: 100%;
+    }
+    .col-s-pull-0 {
+        right: 0;
+    }
+    .col-s-pull-1 {
+        right: 12.5%;
+    }
+    .col-s-pull-2 {
+        right: 25%;
+    }
+    .col-s-pull-3 {
+        right: 37.5%;
+    }
+    .col-s-pull-4 {
+        right: 50%;
+    }
+    .col-s-pull-5 {
+        right: 62.5%;
+    }
+    .col-s-pull-6 {
+        right: 75%;
+    }
+    .col-s-pull-7 {
+        right: 87.5%;
+    }
+    .col-s-pull-8 {
+        right: 100%;
+    }
+}
