@@ -811,33 +811,9 @@
                                                 I'm one big &#8234;paragraph.&#8236; Go ahead and edit &#8234;me.&#8236; I dare &#8234;you.&#8236; The quick brown fox jumped over the lazy &#8234;dog.&#8236; Blah blah blah blah blah blah &#8234;blah ...&#8236;
                                             </p>
                                         </section>
-
-
-
-
                                     </div>
-                                    <!-- end of basic select widgets -->
 
-                                    <div id="otherWidgetsTab" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="title:'Other Widgets', style:'padding:10px;display:none;'">
-                                        <div class="row">
-                                            <div class="col-6 col-s-8">
-                                                <h2 id="nav-"></h2>
 
-                                            </div>
-                                            <div class="col-2 col-s-0 hidden-s sidebar-nav">
-                                                <section class="fixed-top">
-                                                    <h2>Navigation</h2>
-                                                    <ul class="nav">
-                                                        <li><a href="#nav-typography">Typohrapy</a>
-                                                        </li>
-                                                        <li><a href="#nav-tables">Tables</a>
-                                                        </li>
-                                                    </ul>
-                                                </section>
-                                            </div>
-
-                                        </div>
-                                    </div>
                                     <div class="col-2 col-s-0 hidden-s sidebar-nav">
                                         <section class="fixed-top">
                                             <h2>Navigation</h2>
@@ -873,6 +849,35 @@
                             </div>
                         </div>
                         <!-- end of basic form widgets -->
+                        <div id="otherWidgetsTab" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="title:'Other Widgets', style:'padding:10px;display:none;'">
+                            <div class="row">
+                                <div class="col-6 col-s-8">
+
+                                    <section id="nav-calendar">
+                                        <h2>Calendar</h2>
+                                        <input id="calendar" data-dojo-type="dijit/Calendar">
+                                    </section>
+
+                                    <section id="nav-tree">
+                                        <h2>Tree</h2>
+                                        <div id="rootlessTree" data-dojo-type="dijit/Tree" data-dojo-props="model:continentModel,query:{ type:'continent' },showRoot: false,openOnClick:true"></div>
+                                    </section>
+
+                                </div>
+                                <div class="col-2 col-s-0 hidden-s sidebar-nav">
+                                    <section class="fixed-top">
+                                        <h2>Navigation</h2>
+                                        <ul class="nav">
+                                            <li><a href="#nav-calendar">Calendar</a>
+                                            </li>
+                                            <li><a href="#nav-tree">Tree</a>
+                                            </li>
+                                        </ul>
+                                    </section>
+                                </div>
+
+                            </div>
+                        </div>
                         <div id="layoutTab" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="title:'Layout Elements', style:'padding:10px;display:none;'">
                             <div class="row">
                                 <div class="col-6 col-s-8">
@@ -882,8 +887,25 @@
                                             <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'top',splitter: true">Top Panel (resizable)</div>
                                             <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'center'">Center Panel</div>
                                             <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'bottom',splitter:true">Bottom Panel (resizable)</div>
-                                            <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'left',splitter:true,minSize:150,maxSize:250" , style="width:150px">Left (resizable between 150px and 250px)</div>
+                                            <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'left',splitter:true,minSize:150,maxSize:250" ,style="width:150px">Left (resizable between 150px and 250px)</div>
                                             <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'right'">Right Panel</div>
+                                        </div>
+                                    </section>
+                                    <section id="nav-accordioncontainer">
+                                        <h2>AccordionContainer</h2>
+                                        <div data-dojo-type="dijit/layout/AccordionContainer" data-dojo-props="duration:240" style="height:15em;">
+                                            <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="title:'Accordion 1'">Content of Accordion 1</div>
+                                            <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="title:'Accordion 2'">Content of Accordion 2</div>
+                                            <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="title:'Accordion 3'">Content of Accordion 3</div>
+                                        </div>
+                                    </section>
+                                    <section id="nav-titlepane">
+                                        <h2>TitlePane</h2>
+                                        <div data-dojo-type="dijit/TitlePane" data-dojo-props="title:'my pane', width:275">
+                                            <p>This is a title pane. It can be expanded and collapsed.</p>
+
+                                            <p>Sed sollicitudin suscipit risus. Nam ullamcorper. Sed nisl lectus, pellentesque nec, malesuada eget, ornare a, libero. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+
                                         </div>
                                     </section>
                                 </div>
@@ -893,11 +915,9 @@
                                         <ul class="nav">
                                             <li><a href="#nav-bordercontainer">BorderContainer</a>
                                             </li>
-                                            <li><a href="#nav-accordeon">Accordeon</a>
+                                            <li><a href="#nav-accordioncontainer">AccordionContainer</a>
                                             </li>
                                             <li><a href="#nav-titlepane">TitlePane</a>
-                                            </li>
-                                            <li><a href="#nav-tree">Tree</a>
                                             </li>
                                         </ul>
                                     </section>
@@ -1102,8 +1122,48 @@
                         <div id="htmlTab" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="title:'Html Elements', style:'padding:10px;display:none;'">
                             <div class="row">
                                 <div class="col-6 col-s-8">
-                                    <h2 id="nav-"></h2>
+                                    <section id="nav-typography">
+                                        <h2>Typohrapy</h2>
+                                        <h1>H1 Element</h1>
+                                        <h2>H2 Element</h2>
+                                        <h3>H3 Element</h3>
+                                        <h4>H4 Element</h4>
+                                        <h5>H5 Element</h5>
+                                        <h6>H6 Element</h6>
+                                    </section>
 
+
+                                    <section>
+                                        <h2>Table</h2>
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <td>head 1</td>
+                                                    <td>head 2</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Data 1</td>
+                                                    <td>Data 2</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Data 3</td>
+                                                    <td>Data 4</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Data 5</td>
+                                                    <td>Data 6</td>
+                                                </tr>
+                                            </tbody>
+                                            <tfoot>
+                                                <tr>
+                                                    <td>foot 1</td>
+                                                    <td>foot 2</td>
+                                                </tr>
+                                            </tfoot>
+                                        </table>
+                                    </section>
                                 </div>
                                 <div class="col-2 col-s-0 sidebar-nav">
                                     <section class="fixed-top">
