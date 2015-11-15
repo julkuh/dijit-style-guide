@@ -318,3 +318,15 @@
         right: 100%;
     }
 }
+
+@media (max-width: 799px) {
+    .hidden-s {
+        display: none!important
+    }
+}
+
+@media (min-width: 800px) and (max-width: 999px) {
+    .hidden-m {
+        display: none!important
+    }
+}
