@@ -876,20 +876,28 @@
                         <div id="layoutTab" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="title:'Layout Elements', style:'padding:10px;display:none;'">
                             <div class="row">
                                 <div class="col-6 col-s-8">
-                                    <h2 id="nav-"></h2>
-
+                                    <section id="nav-bordercontainer">
+                                        <h2>BorderContainer</h2>
+                                        <div id="borderContainerDemo" data-dojo-type="dijit/layout/BorderContainer" data-dojo-props="design:'sidebar',liveSplitters: true, gutters:true" style="width:100%;height:300px">
+                                            <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'top',splitter: true">Top Panel (resizable)</div>
+                                            <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'center'">Center Panel</div>
+                                            <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'bottom',splitter:true">Bottom Panel (resizable)</div>
+                                            <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'left',splitter:true,minSize:150,maxSize:250" , style="width:150px">Left (resizable between 150px and 250px)</div>
+                                            <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'right'">Right Panel</div>
+                                        </div>
+                                    </section>
                                 </div>
                                 <div class="col-2 col-s-0 hidden-s sidebar-nav">
                                     <section class="fixed-top">
                                         <h2>Navigation</h2>
                                         <ul class="nav">
-                                            <li><a href="#nav-typography">BorderContainer</a>
+                                            <li><a href="#nav-bordercontainer">BorderContainer</a>
                                             </li>
-                                            <li><a href="#nav-tables">Accordeon</a>
+                                            <li><a href="#nav-accordeon">Accordeon</a>
                                             </li>
                                             <li><a href="#nav-titlepane">TitlePane</a>
                                             </li>
-                                            <li><a href="#nav-tables">Tree</a>
+                                            <li><a href="#nav-tree">Tree</a>
                                             </li>
                                         </ul>
                                     </section>
@@ -902,6 +910,7 @@
                             <div class="row">
                                 <div class="col-6 col-s-8">
                                     <section id="nav-dnd">
+                                        <h2>Drag and Drop</h2>
                                         <div style="display: inline-block; margin:5px;">
                                             <h3>Vertical Source</h3>
 
@@ -926,7 +935,6 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="clearfix"></div>
                                     </section>
 
 
@@ -1090,7 +1098,7 @@
 
                             </div>
                         </div>
-                        <!-- end of layout elements -->
+                        <!-- end of various elements -->
                         <div id="htmlTab" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="title:'Html Elements', style:'padding:10px;display:none;'">
                             <div class="row">
                                 <div class="col-6 col-s-8">

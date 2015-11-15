@@ -38,6 +38,10 @@ p.description {
 }
 /* Navigation*/
 
+ul.nav {
+    padding-left: 0;
+}
+
 .nav li {
     list-style: none;
 }
