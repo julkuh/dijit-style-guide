@@ -22,7 +22,21 @@ ul.nav {
 
 .nav li {
     list-style: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    color: #0068a5;
 }
+
+.nav li:hover {
+    background: #eee;
+    color: #2a6496;
+}
+
+.nav a {
+    color: inherit;
+    text-decoration: none;
+}
+/*sections*/
 
 section.fixed-top {
     position: fixed;
