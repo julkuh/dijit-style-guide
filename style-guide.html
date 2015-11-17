@@ -549,7 +549,7 @@
                                                 <button data-dojo-type="dijit/form/Button" data-dojo-props="label:'With Icon',iconClass:'dijitIconTask'">
                                                 </button>
 
-                                                <hr>Disabled:
+                                                <hr class="spacer">Disabled:
                                                 <button data-dojo-type="dijit/form/Button" data-dojo-props="label:'Button',disabled:true">
                                                 </button>
                                                 <button data-dojo-type="dijit/form/Button" data-dojo-props="label:'With Icon',iconClass:'dijitIconTask',disabled:true">
@@ -614,94 +614,112 @@
                                         </section>
 
                                         <section id="nav-checkboxes">
-                                            <h2>CheckBox</h2>
+                                            <h2><span class="secondary">dijit/form/</span>CheckBox</h2>
                                             <div class="sub-section no-border">
                                                 <fieldset>
+                                                    Enabled:
                                                     <input id="check1" type="checkBox" data-dojo-type="dijit/form/CheckBox">
                                                     <label for="check1">unchecked</label>
 
                                                     <input id="check2" type="checkBox" data-dojo-type="dijit/form/CheckBox" data-dojo-props="checked:true" checked="checked">
                                                     <label for="check2">checked</label>
 
+                                                    <hr class="spacer">Disabled:
                                                     <input id="check3" type="checkBox" data-dojo-type="dijit/form/CheckBox" data-dojo-props='disabled:true' disabled>
-                                                    <label for="check3">disabled</label>
+                                                    <label for="check3">unchecked </label>
 
                                                     <input id="check4" type="checkBox" data-dojo-type="dijit/form/CheckBox" data-dojo-props='disabled:true, checked:true' checked="checked" disabled>
-                                                    <label for="check4">disabled and checked</label>
+                                                    <label for="check4">checked</label>
                                                 </fieldset>
                                             </div>
                                         </section>
 
                                         <section id="nav-radiobuttons">
-                                            <h2>Radio Buttons</h2>
+                                            <h2><span class="secondary">dijit/form/</span>RadioButtons</h2>
                                             <div class="sub-section no-border">
-                                                <fieldset>
+                                                <fieldset>Enabled:
                                                     <input type="radio" name="g1" id="g1rb1" value="news" data-dojo-type="dijit/form/RadioButton">
-                                                    <label for="g1rb1">news</label>
+                                                    <label for="g1rb1">Sun</label>
+
                                                     <input type="radio" name="g1" id="g1rb2" value="talk" data-dojo-type="dijit/form/RadioButton" data-dojo-props='checked:true' checked>
-                                                    <label for="g1rb2">talk</label>
+                                                    <label for="g1rb2">Rain</label>
+
+                                                    <hr class="spacer">Disabled:
                                                     <input type="radio" name="g1" id="g1rb3" value="weather" data-dojo-type="dijit/form/RadioButton" data-dojo-props='disabled:true' disabled>
-                                                    <label for="g1rb3">weather <span dir="ltr">(disabled)</span>
-                                                    </label>
+                                                    <label for="g1rb3">Sun<span dir="ltr">(disabled)</span>
+
+                                                        <input type="radio" name="g1" id="g1rb4" value="weather" data-dojo-type="dijit/form/RadioButton" data-dojo-props='disabled:true,checked:true' disabled>
+                                                        <label for="g1rb4">Rain<span dir="ltr">(disabled)</span>
+                                                        </label>
                                                 </fieldset>
                                             </div>
                                         </section>
-                                        <section id="nav-datetextbox">
-                                            <h2>dijit/form/DateTextBox</h2>
-                                            <div class="sub-section no-border">
-                                                <label for="date1">Enabled w/placeHolder:</label>
-                                                <input id="date1" name="date1" type="text" data-dojo-type="dijit/form/DateTextBox" data-dojo-props="placeHolder:'Birthday'">
-                                                <label for="date2">Disabled w/placeHolder:</label>
-                                                <input id="date2" name="date2" type="text" data-dojo-type="dijit/form/DateTextBox" data-dojo-props='placeHolder:"Birthday", disabled:true'>
-                                                <label for="date2">Disabled w/value:</label>
-                                                <input id="date3" name="date3" type="text" data-dojo-type="dijit/form/DateTextBox" data-dojo-props='value:"2008-12-25", disabled:true'>
-                                            </div>
-                                        </section>
-                                        <section id="nav-timetextbox">
-                                            <h2>dijit/form/TimeTextBox</h2>
-                                            <div class="sub-section no-border">
-                                                <label for="time1">Enabled:</label>
-                                                <input id="time1" name="time1" type="text" data-dojo-type="dijit/form/TimeTextBox" value="T17:45:00">
-                                                <label for="time2">Disabled:</label>
-                                                <input id="time2" name="time2" type="text" data-dojo-type="dijit/form/TimeTextBox" value="T17:45:00" data-dojo-props='disabled:true' disabled>
+
+                                        <section id="nav-numberandinputs">
+                                            <h2>Text and Number Inputs</h2>
+                                            <div id="nav-textbox" class="sub-section no-border">
+                                                <h3><span class="secondary">dijit/form/</span>TextBox</h3> Enabled:
+                                                <input type="text" data-dojo-type="dijit/form/TextBox" data-dojo-props="placeHolder:'Your name'">
+
+                                                <hr class="spacer">Disabled:
+                                                <input type="text" data-dojo-type="dijit/form/TextBox" data-dojo-props='placeHolder:"Your name", disabled:true'>
                                             </div>
 
-                                        </section>
-                                        <section id="nav-currencytextbox">
-                                            <h2>dijit/form/CurrencyTextBox</h2>
-                                            <div class="sub-section no-border">
-                                                <label for="currency1">Enabled:</label>
+                                            <div id="nav-validationtextbox" class="sub-section">
+                                                <h3><span class="secondary">dijit/form/</span>ValidationTextBox</h3> Enabled:
+                                                <input type="text" data-dojo-type="dijit/form/ValidationTextBox" data-dojo-props='placeHolder:"Your City(no space allowed)",regExp:"[\\w]+", invalidMessage:"Invalid Non-Space Text."'>
+
+                                                <hr class="spacer">Disabled:
+                                                <input type="text" data-dojo-type="dijit/form/ValidationTextBox" data-dojo-props='disabled:true,placeHolder:"Your City(no space allowed)",regExp:"[\\w]+", invalidMessage:"Invalid Non-Space Text."'>
+                                            </div>
+
+                                            <div id="nav-datetextbox" class="sub-section">
+                                                <h3><span class="secondary">dijit/form/</span>DateTextBox</h3> Enabled:
+                                                <input id="date1" name="date1" type="text" data-dojo-type="dijit/form/DateTextBox" data-dojo-props="placeHolder:' Birthday '">
+
+                                                <hr class="spacer">Disabled:
+                                                <input id="date3" name="date2" type="text" data-dojo-type="dijit/form/DateTextBox" data-dojo-props='placeHolder: "Birthday", disabled:true '>
+                                            </div>
+
+                                            <div id="nav-timetextbox" class="sub-section">
+                                                <h3><span class="secondary">dijit/form/</span>TimeTextBox</h2>
+                                                Enabled: 
+                                                <input id="time1" name="time1" type="text" data-dojo-type="dijit/form/TimeTextBox" value="T17:45:00">
+                                                <hr class="spacer">Disabled:
+                                                <input id="time2" name="time2" type="text" data-dojo-type="dijit/form/TimeTextBox" value="T17:45:00" data-dojo-props='disabled:true ' disabled>
+                                            </div>
+                                            <div id="nav-currencytextbox"  class="sub-section">
+                                            <h3><span class="secondary">dijit/form/</span>CurrencyTextBox</h3> Enabled:
                                                 <input id="currency1" type="text" name="income1" value="54775.53" data-dojo-type="dijit/form/CurrencyTextBox" data-dojo-props="
-						required:true, constraints:{ fractional:true }, currency:'USD',
+						required:true, constraints:{ fractional:true }, currency:'USD ',
 						value:54775.53,
-						invalidMessage:'Invalid amount.	 Include dollar sign, commas, and cents.  Cents are mandatory.'
+						invalidMessage:'Invalid amount. Include dollar sign, commas, and cents. Cents are mandatory. '
 				">
-                                                <label for="currency2">Disabled:</label>
+                                                <hr class="spacer">Disabled:
                                                 <input id="currency2" type="text" name="income1" value="54775.53" data-dojo-type="dijit/form/CurrencyTextBox" data-dojo-props="required:true, constraints:{ fractional:true },
-						currency:'USD', invalidMessage:'Invalid amount.	 Include dollar sign, commas, and cents.  Cents are mandatory.',
+						currency:'USD ', invalidMessage:'Invalid amount. Include dollar sign, commas, and cents. Cents are mandatory. ',
 						disabled:true
 				">
+
+
+
                                             </div>
+                                            <div id="nav-numberspinner" class="sub-section">
+                                                <h3><span class="secondary">dijit/form/</span>NumberSpinner</h3> Enabled:
+                                                <input data-dojo-type="dijit/form/NumberSpinner" data-dojo-props='constraints:{max:100,places:0}, value:10 '><i>  max=100</i>
+                                                <hr class="spacer">Disabled:
+                                                <input data-dojo-type="dijit/form/NumberSpinner" data-dojo-props='constraints:{max:100,places:0}, value:10, disabled:true ' id="spinner2">
 
-                                            <hr class="spacer">
-
-                                        </section>
-                                        <section id="nav-numberspinner">
-                                            <h2>dijit/form/NumberSpinner max=100</h2>
-                                            <div class="sub-section no-border">
-                                                <label for="spinner1">Enabled: </label>
-                                                <input data-dojo-type="dijit/form/NumberSpinner" data-dojo-props='constraints:{max:100,places:0}, value:10' id="spinner1">
-                                                <label for="spinner2">Disabled: </label>
-                                                <input data-dojo-type="dijit/form/NumberSpinner" data-dojo-props='constraints:{max:100,places:0}, value:10, disabled:true' id="spinner2">
                                             </div>
-
                                         </section>
+
+
                                         <section id="nav-select">
                                             <h2>dijit/form/Select</h2>
                                             <div class="sub-section no-border">
                                                 <label>Enabled:</label>
 
-                                                <div id="selectEnabled" data-dojo-type="dijit/form/Select" data-dojo-props="value:'t'">
+                                                <div id="selectEnabled" data-dojo-type="dijit/form/Select" data-dojo-props="value:'t '">
                                                     <span data-dojo-value="a"><span>Aerial</span></span>
                                                     <span data-dojo-value="t"><span>Topographic</span></span>
                                                     <span data-dojo-value="s"><span>Street</span></span>
@@ -709,7 +727,7 @@
 
                                                 <label>Disabled:</label>
 
-                                                <div id="selectDisabled" data-dojo-type="dijit/form/Select" data-dojo-props="value:'a',disabled:true">
+                                                <div id="selectDisabled" data-dojo-type="dijit/form/Select" data-dojo-props="value:'a ',disabled:true">
                                                     <span data-dojo-value="a"><span>Aerial</span></span>
                                                     <span data-dojo-value="t"><span>Topographic</span></span>
                                                     <span data-dojo-value="s"><span>Street</span></span>
@@ -721,20 +739,20 @@
                                             <div class="sub-section no-border">
                                                 <label for="filteringSelect">Enabled w/placeHolder: </label>
                                                 <input id="filteringSelect" data-dojo-type="dijit/form/FilteringSelect" data-dojo-props="
-					placeHolder:'place',
+					placeHolder:'place ',
 					store:continentStore,
-					searchAttr:'name',
-					name:'state2'
+					searchAttr:'name ',
+					name:'state2 '
 				">
 
                                                 <label for="filteringSelect2">Disabled w/placeHolder: </label>
                                                 <input id="filteringSelect2" data-dojo-type="dijit/form/FilteringSelect" data-dojo-props="
-					disabled:true, store:continentStore, name:'state2', searchAttr:'name'
+					disabled:true, store:continentStore, name:'state2 ', searchAttr:'name '
 				">
 
                                                 <label for="filteringSelect3">Disabled w/value: </label>
                                                 <input id="filteringSelect3" data-dojo-type="dijit/form/FilteringSelect" data-dojo-props="
-					store: continentStore, searchAttr:'name', disabled:true, value:'CA'
+					store: continentStore, searchAttr:'name ', disabled:true, value:'CA '
 				">
                                             </div>
                                         </section>
