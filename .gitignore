@@ -3,5 +3,6 @@ dojo
 dijit
 node_modules
 bower_components
+.idea
 *html
 !style-guide.html
