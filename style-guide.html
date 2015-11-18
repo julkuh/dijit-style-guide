@@ -471,6 +471,7 @@
 
             // Create test store.
             continentStore = new Memory({
+                //TODO: add items and rename the store
                 data: data
             });
 
@@ -536,7 +537,7 @@
                     <!-- top tabs (marked as "center" to take up the main part of the BorderContainer) -->
                     <div data-dojo-type="dijit/layout/TabContainer" data-dojo-props="region:'center', tabStrip:true" id="topTabs">
 
-                        <div id="basicFormTab" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="title:'Basic Form Widgets', style:'padding:10px;display:none;'">
+                        <div id="basicFormTab" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="title:'Form Elements', style:'padding:10px;display:none;'">
                             <div class="grid-container">
                                 <div class="row">
                                     <div class="col-6 col-s-8">
@@ -690,18 +691,9 @@
                                             </div>
                                             <div id="nav-currencytextbox"  class="sub-section">
                                             <h3><span class="secondary">dijit/form/</span>CurrencyTextBox</h3> Enabled:
-                                                <input id="currency1" type="text" name="income1" value="54775.53" data-dojo-type="dijit/form/CurrencyTextBox" data-dojo-props="
-						required:true, constraints:{ fractional:true }, currency:'USD ',
-						value:54775.53,
-						invalidMessage:'Invalid amount. Include dollar sign, commas, and cents. Cents are mandatory. '
-				">
+                                                <input id="currency1" type="text" name="income1" value="54775.53" data-dojo-type="dijit/form/CurrencyTextBox" data-dojo-props="required:true, constraints:{ fractional:true }, currency:'USD ',value:54775.53,invalidMessage:'Invalid amount. Include dollar sign, commas, and cents. Cents are mandatory. '">
                                                 <hr class="spacer">Disabled:
-                                                <input id="currency2" type="text" name="income1" value="54775.53" data-dojo-type="dijit/form/CurrencyTextBox" data-dojo-props="required:true, constraints:{ fractional:true },
-						currency:'USD ', invalidMessage:'Invalid amount. Include dollar sign, commas, and cents. Cents are mandatory. ',
-						disabled:true
-				">
-
-
+                                                <input id="currency2" type="text" name="income1" value="54775.53" data-dojo-type="dijit/form/CurrencyTextBox" data-dojo-props="required:true, constraints:{ fractional:true },currency:'USD ', invalidMessage:'Invalid amount. Include dollar sign, commas, and cents. Cents are mandatory. ',disabled:true">
 
                                             </div>
                                             <div id="nav-numberspinner" class="sub-section">
@@ -709,15 +701,14 @@
                                                 <input data-dojo-type="dijit/form/NumberSpinner" data-dojo-props='constraints:{max:100,places:0}, value:10 '><i>  max=100</i>
                                                 <hr class="spacer">Disabled:
                                                 <input data-dojo-type="dijit/form/NumberSpinner" data-dojo-props='constraints:{max:100,places:0}, value:10, disabled:true ' id="spinner2">
-
                                             </div>
                                         </section>
 
 
-                                        <section id="nav-select">
-                                            <h2>dijit/form/Select</h2>
-                                            <div class="sub-section no-border">
-                                                <label>Enabled:</label>
+                                        <section id="nav-selects">
+                                            <h2>Selection Elements</h2>
+                                            <div id="nav-select" class="sub-section no-border">
+                                                <h3><span class="secondary">dijit/form/</span>Select</h3> Enabled:
 
                                                 <div id="selectEnabled" data-dojo-type="dijit/form/Select" data-dojo-props="value:'t '">
                                                     <span data-dojo-value="a"><span>Aerial</span></span>
@@ -725,7 +716,7 @@
                                                     <span data-dojo-value="s"><span>Street</span></span>
                                                 </div>
 
-                                                <label>Disabled:</label>
+                                                <hr class="spacer">Disabled:
 
                                                 <div id="selectDisabled" data-dojo-type="dijit/form/Select" data-dojo-props="value:'a ',disabled:true">
                                                     <span data-dojo-value="a"><span>Aerial</span></span>
@@ -733,28 +724,50 @@
                                                     <span data-dojo-value="s"><span>Street</span></span>
                                                 </div>
                                             </div>
-                                        </section>
-                                        <section id="nav-filteringselect">
-                                            <h2>dijit/form/FilteringSelect</h2>
-                                            <div class="sub-section no-border">
-                                                <label for="filteringSelect">Enabled w/placeHolder: </label>
-                                                <input id="filteringSelect" data-dojo-type="dijit/form/FilteringSelect" data-dojo-props="
-					placeHolder:'place ',
-					store:continentStore,
-					searchAttr:'name ',
-					name:'state2 '
-				">
 
-                                                <label for="filteringSelect2">Disabled w/placeHolder: </label>
-                                                <input id="filteringSelect2" data-dojo-type="dijit/form/FilteringSelect" data-dojo-props="
-					disabled:true, store:continentStore, name:'state2 ', searchAttr:'name '
-				">
 
-                                                <label for="filteringSelect3">Disabled w/value: </label>
-                                                <input id="filteringSelect3" data-dojo-type="dijit/form/FilteringSelect" data-dojo-props="
-					store: continentStore, searchAttr:'name ', disabled:true, value:'CA '
-				">
+                                            <div id="nav-multiselect" class="sub-section">
+                                                <h3><span class="secondary">dijit/form/</span>MultiSelect</h3> Enabled
+                                                <select data-dojo-type="dijit/form/MultiSelect" size="4">
+                                                    <option value="AP">Apples</option>
+                                                    <option value="OR">Oranges</option>
+                                                    <option value="PE" selected="selected">Pears</option>
+                                                </select>
+                                                <hr class="spacer">Disabled
+                                                <select data-dojo-type="dijit/form/MultiSelect" size="4" data-dojo-props="disabled:true">
+                                                    <option value="AP">Apples</option>
+                                                    <option value="OR">Oranges</option>
+                                                    <option value="PE" selected="selected">Pears</option>
+                                                </select>
                                             </div>
+
+                                            <div id="nav-combobox" class="sub-section">
+                                                <h3><span class="secondary">dijit/form/</span>ComboBox</h3> Enabled
+                                                <select data-dojo-type="dijit/form/ComboBox" data-dojo-props="placeholder:'Select a fruit'">
+                                                    <option>Apples</option>
+                                                    <option>Oranges</option>
+                                                    <option>Pears</option>
+                                                </select>
+                                                <hr class="spacer">Disabled
+
+                                                <select data-dojo-type="dijit/form/ComboBox" data-dojo-props="disabled:true">
+                                                    <option>Apples</option>
+                                                    <option selected>Oranges</option>
+                                                    <option>Pears</option>
+                                                </select>
+                                            </div>
+
+                                            <div id="nav-filteringselect" class="sub-section">
+                                                <h3><span class="secondary">dijit/form/</span>FilteringSelect</h3> Enabled
+                                                <input id="filteringSelect" data-dojo-type="dijit/form/FilteringSelect" data-dojo-props="store:continentStore,searchAttr:' name ',name:'state2 '">
+                                                <!--TODO: Check if working after adding items to store-->
+                                                <input id="filteringSelect2" data-dojo-type="dijit/form/FilteringSelect" data-dojo-props="placeHolder:'Select a continent ',store:continentStore,searchAttr:' name ',name:'state2 '">
+
+                                                <hr class="spacer">Disabled:
+                                                <input id="filteringSelect3" data-dojo-type="dijit/form/FilteringSelect" data-dojo-props="disabled:true, store:continentStore, name:'state2 ',searchAttr:'name'">
+                                                <input id="filteringSelect4" data-dojo-type="dijit/form/FilteringSelect" data-dojo-props="placeHolder:'Select a continent ',store: continentStore,searchAttr:'name ', disabled:true, value:'CA '">
+                                            </div>
+
                                         </section>
                                         <section id="nav-textarea">
                                             <!--	&#8234; and &#8236; are inserted solely for testing purposes to mark the beginning and end of left-to-right text so that
