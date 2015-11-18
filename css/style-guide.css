@@ -73,6 +73,14 @@ section section {
     border-top: 1px dashed #ccc;
 }
 
+.sub-section h3:first-child {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 24px;
+    margin-bottom: 8px;
+    color: #474747
+}
+
 p.description {
     background: transparent;
     text-align: left;
@@ -97,6 +105,10 @@ p.description {
 
 .no-border {
     border: 0 none;
+}
+
+.secondary {
+    color: #ccc
 }
 
 @media (max-width: 800px) {
