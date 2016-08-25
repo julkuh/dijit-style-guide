@@ -548,7 +548,7 @@
                                     <div class="col-6 col-s-8">
                                         <section id="nav-buttons">
                                             <h2>Buttons</h2>
-                                            <div class="sub-section no-border">
+                                            <div id="nav-button" class="sub-section no-border">
                                                 <h3><span class="secondary">dijit/form/</span>Button</h3> Enabled:
                                                 <button data-dojo-type="dijit/form/Button" data-dojo-props="label:'Button'">
                                                 </button>
@@ -561,7 +561,7 @@
                                                 <button data-dojo-type="dijit/form/Button" data-dojo-props="label:'With Icon',iconClass:'dijitIconTask',disabled:true">
                                                 </button>
                                             </div>
-                                            <div class="sub-section">
+                                            <div id="nav-dropdownbutton" class="sub-section">
                                                 <h3><span class="secondary">dijit/form/</span>DropDownButton</h3> Enabled:
                                                 <div data-dojo-type="dijit/form/DropDownButton" data-dojo-props="label:'Drop Down',iconClass:'dijitIconEdit'">
                                                     <div data-dojo-type="dijit/Menu" id="editMenu1" style="display: none;">
@@ -591,7 +591,7 @@
                                                 <div data-dojo-type="dijit/form/DropDownButton" data-dojo-props="label:'User profile',iconClass:'dijitIconEdit',disabled:true">
                                                 </div>
                                             </div>
-                                            <div class="sub-section">
+                                            <div id="nav-combobutton" class="sub-section">
                                                 <h3><span class="secondary">dijit/form/</span>ComboButton</h3>
 
                                                 <span data-dojo-type="dijit/form/ComboButton" data-dojo-props="iconClass:'dijitIconSave',label:'Combo', optionsTitle:'save options'">
@@ -605,7 +605,7 @@
                                                 <span data-dojo-type="dijit/form/ComboButton" data-dojo-props="iconClass:'dijitIconSave',label:'Combo', optionsTitle:'save options', disabled:true">
                                                 </span>
                                             </div>
-                                            <div class="sub-section">
+                                            <div id="nav-togglebutton" class="sub-section">
                                                 <h3><span class="secondary">dijit/form/</span>ToggleButton</h3> Enabled:
                                                 <div data-dojo-type="dijit/form/ToggleButton" data-dojo-props="checked:true, iconClass:'dijitCheckBoxIcon'">I'm checked!</div>
                                                 <div data-dojo-type="dijit/form/ToggleButton" data-dojo-props="checked:false, iconClass:'dijitCheckBoxIcon'">Check me!</div>
@@ -775,12 +775,12 @@
 
                                         </section>
                                         <section>
-                                            <h2>Text Areas</h2>
+                                            <h2 id="nav-textareas">Text Areas</h2>
                                             <!--	&#8234; and &#8236; are inserted solely for testing purposes to mark the beginning and end of left-to-right text so that
 		cogniscent browsers don't render garbled punctuation nor exhibit strange home/end key behavior while in right-to-left mode -->
 
 
-                                            <div class="sub-section no-border">
+                                            <div class="sub-section no-border" id="nav-textarea">
                                                 <h3><span class="secondary">dijit/form/</span>Textarea</h3>
                                                 <p>Enabled:</p>
                                                 <textarea data-dojo-type="dijit/form/Textarea" data-dojo-props='name:"areText"' name="areText">This text area will expand and contract as you type &#8234;text.&#8236; Lorem ipsum dolor sit &#8234;amet,&#8236; consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo &#8234;consequat.&#8236;
@@ -841,7 +841,7 @@
                                                 <li><a href="#nav-checkboxes">Checkboxes</a>
                                                 </li>
 
-                                                <li><a>Text and Number Inputs</a>
+                                                <li><a href="#nav-numberandinputs">Text and Number Inputs</a>
                                                     <ul class="nav nav-secondary">
                                                         <li><a href="#nav-textbox">Text Box</a>
                                                         </li>
@@ -850,8 +850,6 @@
                                                         <li><a href="#nav-datetextbox">DateTextBox</a>
                                                         </li>
                                                         <li><a href="#nav-timetextbox">TimeTextBox</a>
-                                                        </li>
-                                                        <li><a href="#nav-currencytextbox">CurrencyTextBox</a>
                                                         </li>
                                                         <li><a href="#nav-currencytextbox">CurrencyTextBox</a>
                                                         </li>
@@ -868,16 +866,16 @@
                                                         </li>
                                                         <li><a href="#nav-combobox">Combo Box</a>
                                                         </li>
-                                                        <li><a href="#nav-combobox">Filtering Select</a>
+                                                        <li><a href="#nav-filteringselect">Filtering Select</a>
                                                         </li>
                                                     </ul>
                                                 </li>
 
                                                 <li><a href="#nav-textareas">Complex Text Editing</a>
                                                     <ul class="nav nav-secondary">
-                                                        <li><a href="#nav-simpletextarea">SimpleTextArea</a>
-                                                        </li>
                                                         <li><a href="#nav-textarea">TextArea</a>
+                                                        </li>
+                                                        <li><a href="#nav-simpletextarea">SimpleTextArea</a>
                                                         </li>
                                                         <li><a href="#nav-inlineedittextbox">Inline Text Box</a>
                                                         </li>
@@ -1295,14 +1293,16 @@
                                 <div class="col-2 col-s-0 hidden-s sidebar-nav">
                                     <section class="fixed-top">
                                         <h2>Navigation</h2>
-                                        <ul class="nav">
-                                            <li><a href="#nav-dnd">DragAndDrop</a>
-                                            </li>
-                                            <li><a href="#nav-editor">Editor</a>
-                                            </li>
-                                            <li><a href="#nav-slider">Slider</a>
-                                            </li>
-                                        </ul>
+                                        <nav data-gumshoe-header>
+                                            <ul class="nav" data-gumshoe>
+                                                <li class="active"><a class="active" href="#nav-dnd">DragAndDrop</a>
+                                                </li>
+                                                <li><a href="#nav-editor">Editor</a>
+                                                </li>
+                                                <li><a href="#nav-slider">Slider</a>
+                                                </li>
+                                            </ul>
+                                        </nav>
                                     </section>
                                 </div>
 
@@ -1386,6 +1386,8 @@
             </div>
         </div>
     </div>
+    <footer>
+    </footer>
 
 </body>
 
